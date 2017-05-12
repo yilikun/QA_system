@@ -1,0 +1,53 @@
+<!--主体内容部分-->
+<div class="content ">
+    <div class="row">
+        <div class="col-sm-12 col-md-9">
+            <!--内容导航-->
+            <ul class="nav nav-tabs active hidden-xs border-bottom-none">
+                <li><a href="">全部</a></li>
+                <li><a href="">7天</a></li>
+                <li><a href="">30天</a></li>
+                <h4 class="pull-right"><i class="glyphicon glyphicon-question-sign"></i>话题</h4>
+            </ul>
+            <!--主体内容-->
+            <div class="col-sm-12" style="min-width:500px ">
+                <% for (let i =0;i<10;i++) {%>
+                    <div class="row" style="margin:10px 0 20px 0;">
+                        <div class="col-sm-6">
+                            <div class="col-md-2 col-sm-2">
+                                <img src="images/topic-mid-img.png" alt="topicpic"
+                                     style="width: 50px;height: 50px;">
+                            </div>
+                            <div class="col-md-10 col-sm-10">
+                                <span><a href="" class="label label-primary">表单提交</a></span><br>
+                                <span>71 个讨论 · 39 个关注</span><br>
+                                <span>7 天新增 2 个讨论, 30 天新增 4 个讨论</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="col-md-2 col-sm-2">
+                                <img src="images/topic-mid-img.png" alt="topicpic"
+                                     style="width: 50px;height: 50px;">
+                            </div>
+                            <div class="col-md-10 col-sm-10">
+                                <span><a href="" class="label label-primary">表单提交</a></span><br>
+                                <span>71 个讨论 · 39 个关注</span><br>
+                                <span>7 天新增 2 个讨论, 30 天新增 4 个讨论</span>
+                            </div>
+                        </div>
+                    </div>
+                <hr>
+                <% } %>
+            </div>
+            <!--分页-->
+            <ul class="pagination pull-right">
+                <li ><a href="">&laquo;</a></li>
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">&raquo;</a></li>
+            </ul>
+        </div>

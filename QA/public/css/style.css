@@ -1,0 +1,39 @@
+body {
+    padding-top: 70px;
+    background-color: #dddddd;
+}
+.content{
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.text-danger{
+    vertical-align: middle;
+    margin-top: 11px ;
+}
+.boder-bottom-none{
+    border-bottom: none;
+}
+.footer{
+    width:80%;
+
+    margin:0 auto;
+}
+.list-group-item{
+    border-left: none;
+}
+.regist{
+    width:600px;
+    background-color: white;
+    height: 600px;
+    margin:20px auto;
+    border:solid 1px #bbbbbb;
+    border-radius:3px ;
+    min-width: 600px;
+}
+a:hover{
+    text-decoration: none;
+}

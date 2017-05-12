@@ -1,0 +1,46 @@
+<!--右侧边栏-->
+<div class="col-md-3 hidden-sm hidden-xs">
+    <div class="row">
+        <ul class="list-inline">
+            <li class="text-danger"><h4>热门话题</h4></li>
+            <li class="text-danger" style="padding-left: 150px"><a href="" >更多>></a></li>
+
+        </ul>
+
+        <% for(let i = 0; i<5;i++){ %>
+        <div class="row" style="margin-top: 5px;">
+            <div class="col-md-2">
+                <img src="images/topic-mid-img.png" alt="" style="width: 35px;height: 35px; border-radius: 5px">
+            </div>
+            <div class="col-md-10">
+                <a href="" class="label label-info bg-info">bootstrap</a><br>
+                <span style="color: #99A8C8">71 个问题, 39 人关注</span>
+            </div>
+
+        </div>
+        <p class="text-hide">1</p>
+        <% } %>
+        <hr>
+        <!--热门用户-->
+        <div>
+            <ul class="list-inline">
+                <li class="text-danger"><h4>热门用户</h4></li>
+                <li class="text-danger" style="padding-left: 150px"><a href="" >更多>></a></li>
+            </ul>
+            <% for(let i = 0; i<5;i++){ %>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-2">
+                    <img src="images/avater.jpg" alt="" style="width: 35px;height: 35px; border-radius: 5px">
+                </div>
+                <div class="col-md-10">
+                    <a href="" class="label label-info bg-info">bootstrap</a><br>
+                    <span style="color: #99A8C8">71 个问题, 39 人关注</span>
+                </div>
+            </div>
+            <p class="text-hide">1</p>
+            <% } %>
+        </div>
+    </div>
+</div>
+</div>
+</div>

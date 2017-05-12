@@ -1,0 +1,41 @@
+<!--主体内容部分-->
+<div class="content">
+    <div class="row">
+        <div class="col-sm-12 col-md-9">
+            <!--内容导航-->
+            <ul class="nav nav-tabs active hidden-xs border-bottom-none">
+                <li><a href="">最新</a></li>
+                <li><a href="">推荐</a></li>
+                <li><a href="">热门</a></li>
+                <li><a href="">等待回复</a></li>
+                <h4 class="pull-right"><i class="glyphicon glyphicon-list"></i>发现</h4>
+                &emsp;
+            </ul>
+            <!--主体内容-->
+            <div class="col-md-12">
+                <% for (let i =0;i<10;i++) {%>
+                <ul class="list-inline" style="margin-top: 20px">
+                    <li class="col-md-1"><img src="images/avater.jpg" alt="" style="width: 40px;height: 40px; border-radius: 5px"></li>
+                    <li class="col-md-11">
+                        <div><a href="/article">击去注册，打开注册框，但登录框依然在，没有关闭掉</a></div>
+                        <span><a href="">郭峰</a>  回复了问题 • 1 人关注 • 1 个回复 • 15 次浏览 • 13 分钟前</span>
+                        <span class="pull-right"><a href="">回复</a></span>
+                    </li>
+                    <br>
+                </ul><br>
+                <hr>
+
+                <% } %>
+            </div>
+            <!--分页-->
+            <ul class="pagination pull-right">
+                <li ><a href="">&laquo;</a></li>
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href="">6</a></li>
+                <li><a href="">&raquo;</a></li>
+            </ul>
+        </div>

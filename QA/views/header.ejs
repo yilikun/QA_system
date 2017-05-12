@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+<div class="navbar navbar-fixed-top" style="background-color:white;">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-sm" href="/"><img style="width:120px;height:25px;" src="images/node.svg" alt="logo"></a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li class="hidden-sm hidden-md active"><a href="/"><i class="glyphicon glyphicon-heart"></i> 首页</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-list"></i> 发现</a></li>
+                <li><a href="/topic"><i class="glyphicon glyphicon-question-sign"></i> 话题</a></li>
+                <li><a href=""> 模板</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-sm">
+                <li><a href="/about">关于</a></li>
+                <li><a href="/login">登录</a></li>
+                <li><a href="/regist">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
