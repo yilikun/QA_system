@@ -6,19 +6,24 @@
         <h1>注册新用户</h1>
         <br>
         <center>
-    <form role="form" style="width: 60%" name="regForm" ng-submit="postForm()">
+    <form style="width: 60%" name="regForm" ng-submit="postForm()">
         <ul class="list-unstyled">
             <li ><input type="text" class="form-control" placeholder="用户名"
                 ng-model="formData.name" ng-minlength="5" ng-maxlength="12"
                 ng-pattern="/^[a-zA-Z][a-zA-Z0-9_]{4,11}$/" required="required"></li>
-            <span class="text-danger pull-right">用户名不符合要求</span>
+            <p ng-show="regForm.name.$invalid && !regForm.name.$pristine" ng-cloak class="text-danger pull-right">用户名不符合要求</p>
             <br>
-            <li ><input type="text" class="form-control" placeholder="电子邮箱"></li>
+            <li ><input type="text" class="form-control" placeholder="电子邮箱"
+                ng-model="formData.email" ng-pattern="/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/"></li>
+            <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger pull-right">电子邮箱格式不正确</p>
             <br>
             <li ><input type="text" class="form-control" placeholder="密码"></li>
             <br>
+            <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger pull-right">电子邮箱格式不正确</p>
+
             <li ><input type="text" class="form-control" placeholder="确认密码"></li>
             <br>
+            <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger pull-right">电子邮箱格式不正确</p>
             <li>
                 <ul class="list-inline">
                     <li class=" col-xs-6">

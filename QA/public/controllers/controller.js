@@ -21,4 +21,4 @@ registApp.controller('registCtrl',($scope,$http)=>{
 
     }
 
-})
+});
