@@ -1,14 +1,17 @@
 <% include header %>
 
-<div class="regist text-center">
+<div class="regist text-center" ng-app="registApp" ng-controller="registCtrl">
     <embed src="images/node.svg" type="">
     <hr>
         <h1>注册新用户</h1>
         <br>
         <center>
-    <form role="form" style="width: 60%">
+    <form role="form" style="width: 60%" name="regForm" ng-submit="postForm()">
         <ul class="list-unstyled">
-            <li ><input type="text" class="form-control" placeholder="用户名"></li>
+            <li ><input type="text" class="form-control" placeholder="用户名"
+                ng-model="formData.name" ng-minlength="5" ng-maxlength="12"
+                ng-pattern="/^[a-zA-Z][a-zA-Z0-9_]{4,11}$/" required="required"></li>
+            <span class="text-danger pull-right">用户名不符合要求</span>
             <br>
             <li ><input type="text" class="form-control" placeholder="电子邮箱"></li>
             <br>

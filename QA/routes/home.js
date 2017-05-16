@@ -6,3 +6,14 @@ exports.index = (req,res,next) => {
         title:'首页'
     })
 }
+exports.regist = (req,res,next) => {
+    res.render('regist',{
+        title:'注册'
+
+    })
+}
+exports.login = (req,res,next) => {
+    res.render('login',{
+        title:'登录'
+    })
+}

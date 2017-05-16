@@ -39,11 +39,12 @@
     </div>
 
 </footer>
-
-
-
-
-
 <script src="/js/jquery-3.1.1.js"></script>
 </body>
 </html>
+<script>
+    var simplemde = new SimpleMDE({ element: document.getElementById("edit") });
+    var simplemde1 = new SimpleMDE({ element: document.getElementById("edit2") });
+    simplemde.value("我对这个问题的看法是...");
+    simplemde1.value("我对这个问题的看法是...");
+</script>
