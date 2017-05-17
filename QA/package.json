@@ -12,10 +12,13 @@
   "author": "yilikun",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "mongoose": "^4.9.9",
+    "nodemailer": "^4.0.1",
     "path": "^0.12.7",
-    "shortid": "^2.2.8"
+    "shortid": "^2.2.8",
+    "validator": "^7.0.0"
   }
 }

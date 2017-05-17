@@ -37,3 +37,6 @@ body {
 a:hover{
     text-decoration: none;
 }
+.btnclass[disabled]{
+    opacity: 0.5;
+}

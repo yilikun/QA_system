@@ -16,6 +16,7 @@ router.get('/',home.index);
 
 //注册页面路由
 router.get('/regist',home.regist);
+router.post('/regist',home.doRegist);
 
 //登陆页面路由
 router.get('/login',home.login);

@@ -3,8 +3,10 @@
  */
 //保存登陆用户的信息
 const mongoose = require('mongoose');
-const shortid = require('shortid');
+//使用mongoose的Schema方法
 const Schema = mongoose.Schema;
+//使用使id变短的中间件
+const shortid = require('shortid');
 const UserSchema = new Schema({
     //用户的id
     _id:{
@@ -19,7 +21,7 @@ const UserSchema = new Schema({
     },
     //密码
     password:{
-        type:Number,
+        type:String,
         require:true
     },
     //邮箱

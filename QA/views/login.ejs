@@ -1,16 +1,18 @@
 <% include header %>
 
-<div class="regist text-center row" >
+<div class="regist text-center row" ng-app="loginApp" ng-controller="loginCtrl">
     <embed src="images/node.svg" type="">
         <hr>
         <h1>用户登录</h1>
         <br>
         <center>
-            <form role="form" style="width: 60%">
+            <form role="form" style="width: 60%" name="loginForm">
                 <ul class="list-unstyled text-center">
-                    <li><input type="text" class="form-control" placeholder="用户名"></li>
+                    <li><input type="text" class="form-control" placeholder="用户名" name="name" ng-model="formData.user"></li>
+                    <p class="text-danger">用户名不存在</p>
                     <br>
-                    <li><input type="text" class="form-control" placeholder="密码"></li>
+                    <li><input type="password" class="form-control" placeholder="密码" name="password" ng-model="formData.password"></li>
+                    <p class="text-danger">密码错误</p>
                     <br>
                     <li>
                         <input type="submit" class="btn btn-success form-control" value="登录">

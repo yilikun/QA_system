@@ -2,50 +2,64 @@
 
 <div class="regist text-center" ng-app="registApp" ng-controller="registCtrl">
     <embed src="images/node.svg" type="">
-    <hr>
+        <hr>
         <h1>注册新用户</h1>
         <br>
         <center>
-    <form style="width: 60%" name="regForm" ng-submit="postForm()">
-        <ul class="list-unstyled">
-            <li ><input type="text" class="form-control" placeholder="用户名"
-                ng-model="formData.name" ng-minlength="5" ng-maxlength="12"
-                ng-pattern="/^[a-zA-Z][a-zA-Z0-9_]{4,11}$/" required="required"></li>
-            <p ng-show="regForm.name.$invalid && !regForm.name.$pristine" ng-cloak class="text-danger pull-right">用户名不符合要求</p>
-            <br>
-            <li ><input type="text" class="form-control" placeholder="电子邮箱"
-                ng-model="formData.email" ng-pattern="/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/"></li>
-            <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger pull-right">电子邮箱格式不正确</p>
-            <br>
-            <li ><input type="text" class="form-control" placeholder="密码"></li>
-            <br>
-            <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger pull-right">电子邮箱格式不正确</p>
-
-            <li ><input type="text" class="form-control" placeholder="确认密码"></li>
-            <br>
-            <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger pull-right">电子邮箱格式不正确</p>
-            <li>
-                <ul class="list-inline">
-                    <li class=" col-xs-6">
-                        <input type="text" class="form-control" placeholder="验证码" style="width: ">
+            <form style="width: 60%" name="regForm" ng-submit="postForm()" novalidate>
+                <ul class="list-unstyled">
+                    <li><input type="text" class="form-control" placeholder="5-12位用户名" name="name"
+                               ng-model="formData.name" ng-minlength="5" ng-maxlength="12"
+                               ng-pattern="/^[a-zA-Z][a-zA-Z0-9_]{4,11}$/" required></li>
+                    <p ng-show="regForm.name.$invalid && regForm.name.$dirty" ng-cloak class="text-danger ">
+                        用户名不符合要求</p>
+                    <br>
+                    <li><input type="text" class="form-control" placeholder="电子邮箱" name="email"
+                               ng-model="formData.email" ng-pattern="/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/" required></li>
+                    <p ng-show="regForm.email.$invalid && !regForm.email.$pristine" ng-cloak class="text-danger ">
+                        电子邮箱格式不正确</p>
+                    <br>
+                    <li><input type="password" class="form-control" placeholder="密码" name="password"
+                               ng-model="formData.password" ng-pattern="/(?!^\\d+$)(?!^[a-zA-Z]+$)(?!^[_#@]+$).{5,}/"
+                               required></li>
+                    <p ng-show="regForm.password.$invalid && !regForm.password.$pristine" ng-cloak class="text-danger ">
+                        密码格式不正确</p>
+                    <br>
+                    <li><input type="password" class="form-control" placeholder="确认密码" name="repeatPassword"
+                               ng-model="repassword" required></li>
+                    <p ng-show="formData.password != repassword" ng-cloak class="text-danger">
+                        两次密码输入不相同</p>
+                    <br>
+                    <li>
+                        <ul class="list-inline">
+                            <li class=" col-xs-6">
+                                <input type="text" class="form-control" placeholder="验证码" style="width: ">
+                            </li>
+                            <li class="col-xs-6"><img src="" alt="" style="width: 175px; height: 35px;"></li>
+                        </ul>
                     </li>
-                    <li class="col-xs-6"><img src="" alt="" style="width: 175px; height: 35px;"></li>
+                    <br>
+                    <br>
+                    <br>
+                    <li>
+                        <label for="" class="pull-left"><input type="checkbox" checked> 我同意<a href="">用户协议</a></label>
+                        <a href="/login" class="pull-right">已有账号？</a>
+                    </li>
+                    <br>
+                    <li>
+                        <input type="submit" class="btn btn-success form-control btnclass" ng-disabled="regForm.$invalid" value="注册">
+                    </li>
+                    <li>
+                        <div ng-show="success" id="successbox" ng-cloak class="alert alert-success">
+                            {{success}}
+                        </div>
+                        <div ng-show="error" id="errorbox" ng-cloak class="alert alert-danger">
+                            {{error}}
+                        </div>
+                    </li>
                 </ul>
-            </li>
-            <br>
-            <br>
-            <br>
-            <li>
-                <label for="" class="pull-left"><input type="checkbox" checked>  我同意<a href="">用户协议</a></label>
-                <a href="" class="pull-right">已有账号？</a>
-            </li>
-            <br>
-            <li>
-                <input type="submit" class="btn btn-primary form-control" value="注册">
-            </li>
-        </ul>
 
-    </form>
+            </form>
         </center>
 
 </div>
