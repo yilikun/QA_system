@@ -45,4 +45,7 @@ const UserSchema = new Schema({
     }
 })
 const User = mongoose.model('User',UserSchema);
+//为这个user表添加静态方法
+UserSchema.static.getUserByName;
+
 module.exports = User;

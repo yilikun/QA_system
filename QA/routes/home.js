@@ -69,8 +69,28 @@ exports.doRegist = (req,res,next) => {
         })
     }
 }
+//登陆页面
 exports.login = (req,res,next) => {
     res.render('login',{
         title:'登录'
     })
+}
+//登陆业务逻辑
+exports.doLogin = (req,res,next) =>{
+    //1，验证
+    //2.判断一下是用户名登陆还是邮箱登陆
+    //3.查找用户名或者邮箱是否存在
+    //4.对应的密码是否一致
+    //5.登陆后，创建cookie，通过cookie生成session，完成最后的登陆。
+    const username = req.body.name;
+    let getEmail;
+    let getName;
+    username.includes('@') ? email = username : name = str;
+    if(getEmail){
+        if(!validator.isEmail){
+
+        }
+    }
+    const password = req.body.password;
+
 }

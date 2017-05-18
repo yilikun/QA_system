@@ -40,3 +40,6 @@ a:hover{
 .btnclass[disabled]{
     opacity: 0.5;
 }
+.notop{
+    margin-top:0;
+}

@@ -42,7 +42,7 @@ loginApp.controller('loginCtrl',($scope,$http)=>{
     //登陆表单的提交
     $scope.loginForm = ()=>{
         $http({
-            method:'post',
+            method:'POST',
             url:'/login',
             data:$.param($scope.formData),
             headers:{'Content-Type':'application/x-www-form-urlencoded'}
@@ -52,4 +52,4 @@ loginApp.controller('loginCtrl',($scope,$http)=>{
             console.log(err);
         })
     }
-})
+});

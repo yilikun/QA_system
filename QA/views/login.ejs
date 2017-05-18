@@ -8,15 +8,28 @@
         <center>
             <form role="form" style="width: 60%" name="loginForm">
                 <ul class="list-unstyled text-center">
-                    <li><input type="text" class="form-control" placeholder="用户名" name="name" ng-model="formData.user"></li>
-                    <p class="text-danger">用户名不存在</p>
-                    <br>
-                    <li><input type="password" class="form-control" placeholder="密码" name="password" ng-model="formData.password"></li>
-                    <p class="text-danger">密码错误</p>
-                    <br>
+                    <li><input type="text" class="form-control" placeholder="用户名" name="name"
+                               ng-model="formData.user" ng-minlength="5" ng-maxlength="12"
+                               ng-pattern="/(^[a-zA-Z][a-zA-Z0-9_]{4,11}$)|(^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$)/" required></li>
                     <li>
-                        <input type="submit" class="btn btn-success form-control" value="登录">
+                        <div style="height: 25px;" class="text-danger">
+                            <span ng-cloak ng-show="loginForm.name.$invalid && loginForm.name.$dirty">用户名/邮箱不符合要求</span>
+                        </div>
                     </li>
+                    <li><input type="password" class="form-control" placeholder="密码" name="password"
+                               ng-model="formData.password" ng-pattern="/(?!^\\d+$)(?!^[a-zA-Z]+$)(?!^[_#@]+$).{5,}/"
+                               required></li>
+                    <div style="height: 20px;" class="text-danger">
+                        <span  ng-cloak ng-show="loginForm.password.$invalid && loginForm.password.$dirty">密码格式不正确</span>
+                    </div>
+                    <li class="text-center">
+                        <span ><input type="checkbox" required checked><label for="">记住我</label></span>
+                        <span ><a href="" class="text-danger">忘记密码</a></span>
+                    </li>
+                    <li>
+                        <input ng-disabled="loginForm.$invalid" type="submit" class="btn btn-success form-control" value="登录">
+                    </li>
+
                 </ul>
 
 

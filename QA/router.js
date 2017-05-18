@@ -20,6 +20,7 @@ router.post('/regist',home.doRegist);
 
 //登陆页面路由
 router.get('/login',home.login);
+router.post('/login',home.doLogin);
 
 //话题页面路由
 router.get('/topic',topic.index);
